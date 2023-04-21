@@ -1,0 +1,33 @@
+
+<div class="container-fluid">
+    <h1 data-text="Spotlight"> <span>🎵</span>Stay on tune with us</h1>
+    Write down your email, so you can get every-week notation about our shop.
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-9">
+            <input ng-model="user.email"
+                   id="email"
+                   type="email"
+                   class="form-control"
+                   placeholder="Email Address"
+            required/>
+        </div>
+        <div class="col-sm-3 hidden-xs">
+            <a ng-click="model.checkemail(user.email)" class="btn btn-primary btn-block">Accelerate tunes</a>
+        </div>
+    </div>
+    <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+        <a ng-click="model.checkemail(user.email)" class="btn btn-primary btn-block">Accelerate tunes</a>
+    </div>
+
+
+    <div ng-show="model.error" class="alert alert-danger">
+        {{model.error}}
+    </div>
+
+    <div ng-show="model.message" class="alert alert-success">
+        {{model.message}}
+    </div>
+
+     You can unsubsribe later.
+</div>
